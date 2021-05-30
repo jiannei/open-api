@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "ext-pcntl": "*",
+        "ext-redis": "^5.3",
         "ext-swoole": "*",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -68,6 +69,11 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "compile": [
+            "@php artisan route:cache",
+            "@php artisan event:cache",
+            "@php artisan view:cache"
         ]
     }
 }
