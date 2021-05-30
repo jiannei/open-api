@@ -16,7 +16,7 @@ use Jiannei\Response\Laravel\Support\Facades\Response;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return app()->version();
 });
 
 Route::get('author', function () {
