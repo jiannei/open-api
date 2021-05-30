@@ -16,7 +16,10 @@ use Jiannei\Response\Laravel\Support\Facades\Response;
 */
 
 Route::get('/', function () {
-    return app()->version();
+    $laravelVersion = Illuminate\Foundation\Application::VERSION;
+    $phpVersion = PHP_VERSION;
+
+    return "Laravel v{$laravelVersion} (PHP v{$phpVersion})";
 });
 
 Route::get('author', function () {
