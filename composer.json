@@ -9,6 +9,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ext-pcntl": "*",
+        "ext-swoole": "*",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -17,6 +19,7 @@
         "jiannei/laravel-logger": "^1.1",
         "jiannei/laravel-response": "^1.6",
         "laravel/framework": "^8.40",
+        "laravel/octane": "^1.0",
         "laravel/tinker": "^2.5"
     },
     "require-dev": {
