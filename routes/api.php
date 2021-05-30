@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GithubController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,3 +28,9 @@ Route::get('users/array', [UsersController::class, 'array']);
 Route::get('fail', [UsersController::class, 'fail']);
 Route::get('exception', [UsersController::class, 'exception']);
 Route::get('validation', [UsersController::class, 'validationException']);
+
+Route::group(['prefix' => 'github'], function () {
+    Route::get('trending/{language?}', [GithubController::class,'trending']);
+    Route::get('spoken-languages', [GithubController::class,'spokenLanguages']);
+    Route::get('languages', [GithubController::class,'languages']);
+});
